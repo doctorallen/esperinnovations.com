@@ -1,0 +1,28 @@
+.hero {
+    .title,
+    .subtitle {
+        color: $white;
+    }
+
+    .title {
+        font-size: 4rem;
+        text-transform: uppercase;
+    }
+
+    // background: linear-gradient(90deg,#cf70f6 0%,#1f56ac 100%);
+	background: linear-gradient(-45deg, #ff4500, #cf70f6, #0070c0);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+}
