@@ -11,15 +11,16 @@
         // font-family: "Allerta Stencil";
         // font-family: "Baumans"; // meh
         // font-family: "Wallpoet";
-        font-family: "Bungee Hairline"; //oooo
+        font-family: "Bungee Hairline";
+        // font-family: "Megrim";
         // font-family: "Montserrat Subrayada";
         // font-family: "Geo";
         // text-transform: uppercase;
     }
 
     // background: linear-gradient(90deg,#cf70f6 0%,#1f56ac 100%);
-	background: linear-gradient(-45deg, #ff4500, #cf70f6, #0070c0);
-	background-size: 400% 400%;
+	background: linear-gradient(-45deg, #ff4500, #cf70f6, #24CEFC, #10D7AE);
+	background-size: 600% 600%;
 	animation: gradient 15s ease infinite;
 
     @keyframes gradient {
