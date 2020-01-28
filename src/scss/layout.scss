@@ -1,13 +1,14 @@
 body{
-    // font-family: "VT323", sans-serif;
-    font-family: "Major Mono Display", sans-serif;
-    // font-family: "Montserrat", sans-serif;
-    // font-family: "Oswald", sans-serif;
-    // font-family: "Lato", sans-serif;
+    // font-family: "Major Mono Display", sans-serif;
+    // font-family: "Space Mono", sans-serif;
+    // font-family: "IBM Plex Mono", sans-serif;
+    font-family: "Share Tech Mono", sans-serif;
 }
 
 .logo{
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 15px;
 }
 .hero {
     .title,
@@ -46,3 +47,23 @@ body{
         }
     }
 }
+
+  .blinking-cursor {
+    font-weight: 100;
+    font-size: 30px;
+    color: white;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  }
+  
+  @keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: white;
+    }
+  }
