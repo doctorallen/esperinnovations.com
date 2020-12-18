@@ -1,0 +1,26 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Esper Innovations" />
+  <meta name="author" content="David Allen" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0070C0" />
+  <link rel="shortcut icon" href="/img/favicon.ico" />
+  <title>{{ if .IsHome }}{{else}}{{ if .Title }}{{ .Title }} | {{ end }}{{end}}{{ .Site.Title }}</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Raleway|Roboto|VT323|Russo+One"
+    rel="stylesheet"
+    type="text/css"
+  />
+  {{ if .Site.IsServer }}
+      {{ $cssOpts := (dict "targetPath" "css/esper.css" "enableSourceMap" true ) }}
+      {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
+      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+    {{ else }}
+      {{ $cssOpts := (dict "targetPath" "css/esper.css" ) }}
+      {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+    {{ end }}
+  <base href="{{ .Site.BaseURL }}" />
+</head>

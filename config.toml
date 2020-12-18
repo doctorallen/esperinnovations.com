@@ -1,0 +1,12 @@
+baseURL = "https://esperinnovations.com"
+languageCode = "en-us"
+title = "Esper Innovations"
+theme = "esper"
+[[menu.main]]
+    name = "Home"
+    identifier = "home"
+    url = "home"
+[[menu.main]]
+    name = "Blog"
+    identifier = "blog"
+    url = "/blog"
