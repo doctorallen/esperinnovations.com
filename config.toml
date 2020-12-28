@@ -5,7 +5,7 @@ theme = "esper"
 [[menu.main]]
     name = "Home"
     identifier = "home"
-    url = "home"
+    url = ""
 [[menu.main]]
     name = "Blog"
     identifier = "blog"

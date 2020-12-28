@@ -8,3 +8,41 @@ body {
   background: url('../images/background.jpg') no-repeat center;
   background-size: cover;
 }
+
+#body-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+#navbar-container {
+  //   display: flex;
+}
+
+#main-nav {
+  ul {
+    list-style: none;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    // justify-content: space-evenly;
+    // display: inline-flex;
+
+    a {
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      color: $nav_primary_color;
+
+      &:hover {
+        color: $nav_hover_color;
+      }
+    }
+  }
+}
