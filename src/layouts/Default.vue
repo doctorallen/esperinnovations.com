@@ -10,6 +10,7 @@
           <h2 v-if="pageSubtitle" class="subtitle">
             {{ pageSubtitle }}
           </h2>
+          <slot name="heroContent"></slot>
         </div>
       </div>
     </section>
@@ -24,7 +25,8 @@
       <div class="content has-text-centered">
         <p>
           Created by <a href="chadcollins.net"><strong>Chad Collins</strong></a
-          >. Powered by <a href="https://gridsome.org/"><strong>Gridsome</strong></a
+          >. Powered by
+          <a href="https://gridsome.org/"><strong>Gridsome</strong></a
           >.
         </p>
       </div>
@@ -52,8 +54,8 @@ export default {
 @import '@/assets/scss/overrides.scss';
 
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
-    Arial, sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.5;

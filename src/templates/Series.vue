@@ -1,6 +1,18 @@
 <template>
   <Layout :pageTitle="`Posts in ${$page.series.title}`">
-    <div v-html="$page.series.content"></div>
+    <template slot="heroContent"
+      ><div v-html="$page.series.content"></div>
+      <div>
+      <b-icon
+                pack="fas"
+                icon="newspaper"
+                >
+            </b-icon>
+            {{ $page.series.belongsTo.totalCount }}
+            post<span v-if="$page.series.belongsTo.totalCount > 1"
+                      >s</span>
+    </div>
+    </template>
     <section class="section">
       <div class="container">
         <div class="columns">
@@ -17,17 +29,26 @@
           </div>
           <div class="column">
             <p>
-              <span v-if="$page.series.belongsTo.totalCount > 1">
-                There are {{ $page.series.belongsTo.totalCount }} posts in this
-                series.
-              </span>
-              <span v-if="$page.series.belongsTo.totalCount === 1">
-                There is 1 post in this series.
-              </span>
               The latest post in this series was published on
-              {{ $page.series.belongsTo.edges[0].node.date }}.
             </p>
             <div class="box">
+              <div class="columns">
+                <div class="column">
+                  <div class="stats-post-count">
+                    
+                  </div>
+                  <div class="stats-label">
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="stats-date">
+                    {{ $page.series.belongsTo.edges[0].node.date }}
+                  </div>
+                  <div class="stats-data-label">
+                    latest post
+                  </div>
+                </div>
+              </div>
               <figure class="image is-rounded is-128x128">
                 <img class="is-rounded" :src="`../../${$page.series.image}`" />
               </figure>
@@ -92,6 +113,15 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/overrides.scss';
+
+.large-data {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.large-data-label {
+  text-align: center;
+}
 
 .post {
   padding-bottom: 1rem;
