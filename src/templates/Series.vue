@@ -5,7 +5,10 @@
       <div class="container">
         <div class="columns">
           <div class="column is-two-thirds">
-            <ul v-for="post in $page.series.belongsTo.edges" :key="post.node.id">
+            <ul
+              v-for="post in $page.series.belongsTo.edges"
+              :key="post.node.id"
+            >
               <li>
                 <PostItem :post="post" />
               </li>
@@ -13,6 +16,17 @@
             </ul>
           </div>
           <div class="column">
+            <p>
+              <span v-if="$page.series.belongsTo.totalCount > 1">
+                There are {{ $page.series.belongsTo.totalCount }} posts in this
+                series.
+              </span>
+              <span v-if="$page.series.belongsTo.totalCount === 1">
+                There is 1 post in this series.
+              </span>
+              The latest post in this series was published on
+              {{ $page.series.belongsTo.edges[0].node.date }}.
+            </p>
             <div class="box">
               <figure class="image is-rounded is-128x128">
                 <img class="is-rounded" :src="`../../${$page.series.image}`" />
