@@ -3,7 +3,12 @@
     <div class="box">
       <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
         <ul>
-          <li><router-link to="/">Home</router-link></li>
+          <li><g-link to="/blog">Blog</g-link></li>
+          <li v-if="$page.post.series">
+            <g-link :to="$page.post.series.path">{{
+              $page.post.series.title
+            }}</g-link>
+          </li>
           <li class="is-active">
             <a href="#" aria-current="page">{{ $route.params.title }}</a>
           </li>
@@ -36,6 +41,8 @@
      }
      series {
        id
+       title
+       path
      }
     }
   }

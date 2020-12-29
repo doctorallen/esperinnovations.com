@@ -1,5 +1,5 @@
 <template>
-  <Homepage>
+  <Layout pageTitle="Blog">
     <div class="section">
       <div class="container">
         <div class="columns">
@@ -75,7 +75,7 @@
         </div>
       </div>
     </div>
-  </Homepage>
+  </Layout>
 </template>
 
 <page-query>
@@ -110,11 +110,7 @@
 </page-query>
 
 <script>
-import Homepage from '~/layouts/Homepage.vue';
 export default {
-  components: {
-    Homepage,
-  },
   metaInfo: {
     title: 'Hello, world!',
   },

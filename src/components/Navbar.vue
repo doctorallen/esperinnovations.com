@@ -8,7 +8,10 @@
         />
       </b-navbar-item>
     </template>
-    <template slot="start">
+    <template slot="end">
+      <b-navbar-item to="/blog" tag="router-link">
+        Blog
+      </b-navbar-item>
       <b-navbar-item to="/about" tag="router-link">
         About
       </b-navbar-item>
