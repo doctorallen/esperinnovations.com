@@ -111,3 +111,41 @@ $navbar-item-color: white;
         justify-content: center;
     }
 }
+
+.hero-content-section {
+    padding-bottom: 15px;
+}
+
+.icon {
+    display: inline-block;
+}
+
+.hero.is-medium  {
+    @include tablet {
+        .hero-body {
+            padding-bottom: 5rem;
+            padding-top: 5rem;
+        }
+    }
+}
+
+.box.breadcrumb-container {
+    border-radius: 0px;
+}
+
+.hero {
+    -moz-box-shadow: inset 0 -10px 10px -10px rgba(0,0,0,0.45);
+    -webkit-box-shadow: inset 0 -10px 10px -10px rgba(0,0,0,0.45);
+    box-shadow: inset 0 -10px 10px -10px rgba(0,0,0,0.45);
+}
+
+body,
+.layout {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}

@@ -26,10 +26,7 @@
     <footer class="footer">
       <div class="content has-text-centered">
         <p>
-          Created by <a href="chadcollins.net"><strong>Chad Collins</strong></a
-          >. Powered by
-          <a href="https://gridsome.org/"><strong>Gridsome</strong></a
-          >.
+          Copyright &copy; Esper Innovations, 2020.
         </p>
       </div>
     </footer>

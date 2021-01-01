@@ -1,6 +1,15 @@
 <template>
   <Layout :pageTitle="$page.post.title">
-    <div class="box">
+      <template slot="heroContent"
+      >
+       <p v-if="$page.post.series" class="subtitle is-6">
+            Part {{$page.post.seriesPart}} of 
+          <g-link :to="$page.post.series.path"
+            >{{ $page.post.series.title }}
+          </g-link>
+        </p>
+    </template>
+    <div class="box breadcrumb-container">
       <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
         <ul>
           <li><g-link to="/blog">Blog</g-link></li>

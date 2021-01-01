@@ -1,22 +1,28 @@
 <template>
-  <Layout :pageTitle="`Posts in ${$page.series.title}`">
+  <Layout :pageTitle="$page.series.title">
     <template slot="heroContent"
-      ><div v-html="$page.series.content"></div>
-      <div>
-      <b-icon
+      ><div class="hero-content-section" v-html="$page.series.content"></div>
+            <div>
+            <p class="heading">
+                    Post<span v-if="$page.series.belongsTo.totalCount > 1"
+                            >s</span></p>
+            <p class="title">{{ $page.series.belongsTo.totalCount }}</p>
+            </div>
+            <div>
+            <p class="heading">Last Updated</p>
+            <p class="title">{{ $page.series.belongsTo.edges[0].node.date }}</p>
+            </div>
+     <!-- <b-icon
                 pack="fas"
                 icon="newspaper"
                 >
             </b-icon>
             {{ $page.series.belongsTo.totalCount }}
             post<span v-if="$page.series.belongsTo.totalCount > 1"
-                      >s</span>
-    </div>
+                      >s</span> -->
     </template>
     <section class="section">
       <div class="container">
-        <div class="columns">
-          <div class="column is-two-thirds">
             <ul
               v-for="post in $page.series.belongsTo.edges"
               :key="post.node.id"
@@ -26,34 +32,6 @@
               </li>
               <hr />
             </ul>
-          </div>
-          <div class="column">
-            <p>
-              The latest post in this series was published on
-            </p>
-            <div class="box">
-              <div class="columns">
-                <div class="column">
-                  <div class="stats-post-count">
-                    
-                  </div>
-                  <div class="stats-label">
-                  </div>
-                </div>
-                <div class="column">
-                  <div class="stats-date">
-                    {{ $page.series.belongsTo.edges[0].node.date }}
-                  </div>
-                  <div class="stats-data-label">
-                    latest post
-                  </div>
-                </div>
-              </div>
-              <figure class="image is-rounded is-128x128">
-                <img class="is-rounded" :src="`../../${$page.series.image}`" />
-              </figure>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -83,7 +61,8 @@
               path
               content
               seriesPart
-              date(format:"MMMM Do YYYY")
+              timeToRead
+              date(format:"MMMM Do, YYYY")
               
               author {
                 id
