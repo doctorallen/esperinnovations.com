@@ -3,15 +3,17 @@
     <Navbar />
     <section class="hero is-medium is-primary">
       <div class="hero-body">
-        <div class="container">
-          <h1 class="title is-1">
-            {{ pageTitle }}
-          </h1>
-          <h2 v-if="pageSubtitle" class="subtitle">
-            {{ pageSubtitle }}
-          </h2>
-          <slot name="heroContent"></slot>
-        </div>
+        <transition name="slide-down-fade" appear>
+            <div class="container">
+            <h1 class="title is-1">
+                {{ pageTitle }}
+            </h1>
+            <h2 v-if="pageSubtitle" class="subtitle">
+                {{ pageSubtitle }}
+            </h2>
+            <slot name="heroContent"></slot>
+            </div>
+        </transition>
       </div>
     </section>
     <transition name="slide-fade" appear>
@@ -71,7 +73,21 @@ body {
 }
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(50px);
+  transform: translateX(80px);
+  opacity: 0;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-down-fade-enter-active {
+  transition: all 0.5s ease;
+}
+.slide-down-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-down-fade-enter, .slide-down-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateY(-80px);
   opacity: 0;
 }
 </style>

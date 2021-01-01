@@ -62,8 +62,52 @@ $link-focus-border: $primary;
 
 // Navbar
 $navbar-background-color: $primary;
+$navbar-item-hover-background-color: rgba(255,255,255,0.7);
 $navbar-item-color: white;
 
 // Import Bulma and Buefy styles
 @import '~bulma';
 @import '~buefy/src/scss/buefy';
+
+// .navbar-start {
+//     margin-left: auto;
+//     margin-right: unset !important;
+//   }
+
+.navbar-start{
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar-menu a.navbar-item {
+    padding: 8px 25px;
+    margin: 0px 25px;
+}
+
+.navbar-menu a.navbar-item,
+.navbar-menu .navbar-link {
+  cursor: pointer;
+  &:focus,
+  &:focus-within,
+  &:hover,
+  &.router-link-active,
+  &.is-active {
+    background-color: transparent;
+    border-bottom: 1px solid $navbar-item-hover-background-color;
+    color: $navbar-item-color; } }
+
+@media screen and (max-width: $desktop - 1px){
+    #logo{
+        display: none;
+    }
+    .force-center{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .navbar-end{
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -8,7 +8,7 @@
         />
       </b-navbar-item>
     </template>
-    <template slot="end">
+    <template slot="start">
       <b-navbar-item to="/blog" tag="router-link">
         Blog
       </b-navbar-item>
