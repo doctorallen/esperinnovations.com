@@ -52,7 +52,7 @@
                 </div>
 
                 <p v-if="edge.node.series" class="subtitle is-6">
-                  Part of
+                  Part {{edge.node.seriesPart}} of
                   <g-link :to="edge.node.series.path"
                     >{{ edge.node.series.title }}
                   </g-link>
@@ -88,6 +88,7 @@
           path
           excerpt
           featuredImage
+          seriesPart
           author {
             id
             title

@@ -19,6 +19,7 @@
         </p>
         <p>{{ post.node.excerpt }}</p>
         <p v-if="post.node.series" class="subtitle is-6">
+            Part {{post.node.seriesPart}} of 
           <g-link :to="post.node.series.path"
             >{{ post.node.series.title }}
           </g-link>

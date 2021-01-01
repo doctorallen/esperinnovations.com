@@ -33,6 +33,7 @@
      excerpt
      featuredImage
      content
+     seriesPart
      tags {
        id
      }

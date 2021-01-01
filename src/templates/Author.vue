@@ -51,9 +51,9 @@
               featuredImage
               path
               content
+              seriesPart
               date(format:"MMMM Do YYYY")
               
-          
               author {
                 id
                 title

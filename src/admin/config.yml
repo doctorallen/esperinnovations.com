@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: chad-collins/gridsome-starter-netlifycms-buefy
+  repo: EsperInnovations/esperinnovations.com
 
 media_folder: 'static/uploads'
 public_folder: 'uploads'
@@ -31,6 +31,7 @@ collections:
           valueField: 'id',
           displayFields: ['title'],
         }
+      - { label: 'Part in Series', name: 'seriesPart', widget: 'number' }
       - {
           label: 'Tags',
           name: 'tags',

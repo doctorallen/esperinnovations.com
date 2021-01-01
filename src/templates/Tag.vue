@@ -21,6 +21,7 @@ query BlogsByTags($id: ID) {
         title
         path
         excerpt
+        seriesPart
         author {
           id
           title

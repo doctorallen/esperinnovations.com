@@ -2,112 +2,11 @@
   <Homepage>
     <div class="section">
       <div class="container">
-        <div class="columns">
-          <div class="column"></div>
-          <div class="column cards-grid is-four-fifths">
-            <article
-              class="card grid-item"
-              v-for="edge in $page.posts.edges"
-              :key="edge.node.id"
-            >
-              <div class="card-image">
-                <g-link :to="edge.node.path">
-                  <figure class="image is-16by9">
-                    <img
-                      :src="`../../${edge.node.featuredImage}`"
-                      :alt="`${edge.node.title} image`"
-                    />
-                  </figure>
-                </g-link>
-              </div>
-
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <g-link :to="edge.node.author.path">
-                      <figure class="image is-48x48">
-                        <img
-                          :src="`../../${edge.node.author.image}`"
-                          alt="Placeholder image"
-                        />
-                      </figure>
-                    </g-link>
-                  </div>
-                  <div class="media-content">
-                    <h2 class="title is-4">
-                      <g-link :to="edge.node.path">
-                        {{ edge.node.title }}
-                      </g-link>
-                    </h2>
-                    <p class="subtitle is-6">
-                      <g-link :to="edge.node.author.path">
-                        {{ edge.node.author.title }}
-                      </g-link>
-                    </p>
-                  </div>
-                </div>
-
-                <div class="content">
-                  {{ edge.node.excerpt }}
-                </div>
-
-                <p v-if="edge.node.series" class="subtitle is-6">
-                  Part of
-                  <g-link :to="edge.node.series.path"
-                    >{{ edge.node.series.title }}
-                  </g-link>
-                </p>
-
-                <div class="tags">
-                  <div class="tag" v-for="tag in edge.node.tags" :key="tag.id">
-                    <g-link :to="tag.path">
-                      {{ tag.id }}
-                    </g-link>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-          </div>
-          <div class="column"></div>
-        </div>
+          Homepage
       </div>
     </div>
   </Homepage>
 </template>
-
-<page-query>
-  query {
-    posts: allPost {
-      edges {
-        node {
-          id
-          title
-          path
-          excerpt
-          featuredImage
-          author {
-            id
-            title
-            path
-            image
-          }
-          tags {
-            id
-            path
-          }
-          series {
-            id
-            title
-            path
-          }
-        }
-      }
-    }
-  }
-</page-query>
 
 <script>
 import Homepage from '~/layouts/Homepage.vue';
