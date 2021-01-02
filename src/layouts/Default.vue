@@ -50,41 +50,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/overrides.scss';
-
-body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-}
-
-/* Enter and leave animations can use different */
-/* durations and timing functions.              */
-.slide-fade-enter-active {
-  transition: all 0.5s ease;
-}
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(80px);
-  opacity: 0;
-}
-
-/* Enter and leave animations can use different */
-/* durations and timing functions.              */
-.slide-down-fade-enter-active {
-  transition: all 0.5s ease;
-}
-.slide-down-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-down-fade-enter, .slide-down-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateY(-80px);
-  opacity: 0;
-}
+@import '@/assets/scss/main.scss';
 </style>

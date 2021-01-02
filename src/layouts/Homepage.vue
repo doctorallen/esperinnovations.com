@@ -35,27 +35,20 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/overrides.scss';
+@import '@/assets/scss/main.scss';
+
+// for some reason this overrides the Default layout too...?
+html {
+    background: $primary; 
+    color: white;
+}
 
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
-    Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
+  color: white;
 }
 
-/* Enter and leave animations can use different */
-/* durations and timing functions.              */
-.slide-fade-enter-active {
-  transition: all 0.5s ease;
-}
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(50px);
-  opacity: 0;
+.footer {
+    background-color: transparent;
+    color: white;
 }
 </style>
