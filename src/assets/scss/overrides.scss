@@ -151,3 +151,8 @@ main {
     -webkit-box-shadow: inset 0 -10px 10px -10px rgba(0,0,0,0.45);
     box-shadow: inset 0 -10px 10px -10px rgba(0,0,0,0.45);
 }
+
+.post-content {
+    max-width: 680px;
+    margin: 0 auto;
+}

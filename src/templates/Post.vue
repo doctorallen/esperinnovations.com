@@ -26,7 +26,7 @@
     </div>
     <section class="section">
       <div class="container">
-        <div class="content">
+        <div class="content post-content">
           <div v-html="$page.post.content"></div>
         </div>
       </div>
