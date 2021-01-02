@@ -32,7 +32,6 @@
               </li>
               <hr />
             </ul>
-        </div>
       </div>
     </section>
   </Layout>
