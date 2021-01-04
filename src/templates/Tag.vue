@@ -1,8 +1,26 @@
 <template>
-  <Layout :pageTitle="`Tagged as ${$route.params.title}`">
+  <Layout :pageTitle="`Posts tagged ${$page.tag.title}`">
+    <template slot="heroContent">
+      <div>
+        <p class="heading">Post<span v-if="$page.tag.belongsTo.totalCount > 1">s</span></p>
+        <p class="title">{{ $page.tag.belongsTo.totalCount }}</p>
+      </div>
+      <div>
+        <p class="heading">Last Updated</p>
+        <p class="title">{{ $page.tag.belongsTo.edges[0].node.date }}</p>
+      </div>
+      <!-- <b-icon
+                pack="fas"
+                icon="newspaper"
+                >
+            </b-icon>
+            {{ $page.series.belongsTo.totalCount }}
+            post<span v-if="$page.series.belongsTo.totalCount > 1"
+                      >s</span> -->
+    </template>
     <section class="section">
       <div class="container">
-        <ul v-for="post in $page.posts.edges" :key="post.node.id">
+        <ul v-for="post in $page.tag.belongsTo.edges" :key="post.node.id">
           <li>
             <PostItem :post="post" />
           </li>
@@ -14,34 +32,47 @@
 </template>
 
 <page-query>
-query BlogsByTags($id: ID) {
-  posts: allPost (filter: {tags: {contains: [$id]}}) {
-    edges {
-      node {
-        title
-        path
-        excerpt
-        seriesPart
-        author {
-          id
-          title
-          image
-          path
-          email
+query($id: ID!) {
+    tag(id: $id) {
+      title
+      path
+      belongsTo {
+        totalCount
+        pageInfo {
+          totalPages
+          currentPage
         }
-        tags {
-          id
-          path
-        }
-        series {
-          id
-          title
-          path
+        edges {
+          node {
+            ... on Post {
+              id
+              title
+              excerpt
+              featuredImage
+              path
+              content
+              seriesPart
+              timeToRead
+              date(format:"MMMM Do, YYYY")
+              
+              author {
+                id
+                title
+                image
+                path
+              }
+
+              series {
+                id
+                title
+                path
+              }
+            }
+          }
         }
       }
-    }
+    }  
   }
-}
 </page-query>
 
 <script>

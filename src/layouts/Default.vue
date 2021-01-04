@@ -4,15 +4,15 @@
     <section class="hero is-medium is-primary">
       <div class="hero-body">
         <transition name="slide-down-fade" appear>
-            <div class="container">
+          <div class="container">
             <h1 class="title is-1">
-                {{ pageTitle }}
+              {{ pageTitle }}
             </h1>
             <h2 v-if="pageSubtitle" class="subtitle">
-                {{ pageSubtitle }}
+              {{ pageSubtitle }}
             </h2>
             <slot name="heroContent"></slot>
-            </div>
+          </div>
         </transition>
       </div>
     </section>
@@ -25,9 +25,7 @@
     </transition>
     <footer class="footer">
       <div class="content has-text-centered">
-        <p>
-          Copyright &copy; Esper Innovations, 2020.
-        </p>
+        <p>Copyright &copy; Esper Innovations, 2021.</p>
       </div>
     </footer>
   </div>

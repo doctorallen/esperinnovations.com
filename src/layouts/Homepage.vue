@@ -10,9 +10,7 @@
     </transition>
     <footer class="footer">
       <div class="content has-text-centered">
-        <p>
-          Copyright &copy; Esper Innovations, 2020.
-        </p>
+        <p>Copyright &copy; Esper Innovations, 2021.</p>
       </div>
     </footer>
   </div>
@@ -39,8 +37,8 @@ export default {
 
 // for some reason this overrides the Default layout too...?
 html {
-    background: $primary; 
-    color: white;
+  background: $primary;
+  color: white;
 }
 
 body {
@@ -48,7 +46,7 @@ body {
 }
 
 .footer {
-    background-color: transparent;
-    color: white;
+  background-color: transparent;
+  color: white;
 }
 </style>
