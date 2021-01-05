@@ -1,0 +1,95 @@
+// Set your colors
+// $primary: #202442;
+// $primary: #1d2034;
+// $primary: #2e3353;
+// $primary: #20222e;
+// $primary: #232742;
+$primary: #273142;
+$primary: #1b2431;
+$primary-invert: findColorInvert($primary);
+$twitter: #4099ff;
+$twitter-invert: findColorInvert($twitter);
+$info: #e63946;
+$red: #e63946;
+$dark: #1d3557;
+$warning: #ffdd57;
+
+// Lists and maps
+$custom-colors: null !default;
+$custom-shades: null !default;
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: mergeColorMaps(
+  (
+    'white': (
+      $white,
+      $black,
+    ),
+    'black': (
+      $black,
+      $white,
+    ),
+    'light': (
+      $light,
+      $light-invert,
+    ),
+    'dark': (
+      $dark,
+      $dark-invert,
+    ),
+    'primary': (
+      $primary,
+      $primary-invert,
+      $primary-light,
+      $primary-dark,
+    ),
+    'link': (
+      $link,
+      $link-invert,
+      $link-light,
+      $link-dark,
+    ),
+    'info': (
+      $info,
+      $info-invert,
+      $info-light,
+      $info-dark,
+    ),
+    'success': (
+      $success,
+      $success-invert,
+      $success-light,
+      $success-dark,
+    ),
+    'warning': (
+      $warning,
+      $warning-invert,
+      $warning-light,
+      $warning-dark,
+    ),
+    'danger': (
+      $danger,
+      $danger-invert,
+      $danger-light,
+      $danger-dark,
+    ),
+  ),
+  $custom-colors
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+// Navbar
+$navbar-background-color: $primary;
+$navbar-item-hover-background-color: rgba(255, 255, 255, 0.7);
+$navbar-item-color: white;
+
+// $scheme-main: $primary;
+// $scheme-main-bis: pink;
+// $scheme-main-ter: green;
+// $scheme-invert: #273142;
+// $scheme-invert-bis: blue;
+// $scheme-invert-ter: purple;

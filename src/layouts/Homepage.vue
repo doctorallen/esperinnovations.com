@@ -36,17 +36,17 @@ export default {
 @import '@/assets/scss/main.scss';
 
 // for some reason this overrides the Default layout too...?
-html {
-  background: $primary;
-  color: white;
-}
+// html {
+//   background: $primary;
+//   color: white;
+// }
 
-body {
-  color: white;
-}
+// body {
+//   color: white;
+// }
 
-.footer {
-  background-color: transparent;
-  color: white;
-}
+// .footer {
+//   background-color: transparent;
+//   color: white;
+// }
 </style>

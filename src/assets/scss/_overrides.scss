@@ -1,0 +1,95 @@
+@import '~bulma/sass/utilities/_all';
+@import 'variables';
+// Import Bulma and Buefy styles
+html {
+  //   color: $dark;
+  //   background-color: white;
+}
+
+body,
+.layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.navbar-start {
+  flex-grow: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+.navbar-menu a.navbar-item {
+  padding: 8px 25px;
+  margin: 0px 25px;
+}
+
+.navbar-menu a.navbar-item,
+.navbar-menu .navbar-link {
+  cursor: pointer;
+  &:focus,
+  &:focus-within,
+  &:hover,
+  &.router-link-active,
+  &.is-active {
+    background-color: transparent;
+    border-bottom: 1px solid $navbar-item-hover-background-color;
+    color: $navbar-item-color;
+  }
+}
+
+@media screen and (max-width: $desktop - 1px) {
+  #logo {
+    display: none;
+  }
+  .force-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .navbar-end {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.hero-content-section {
+  padding-bottom: 15px;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.hero {
+  -moz-box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.45);
+  box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.45);
+  &.is-medium {
+    @include tablet {
+      .hero-body {
+        padding-bottom: 5rem;
+        padding-top: 5rem;
+      }
+    }
+  }
+  &.is-primary {
+    background: #2b3e50;
+  }
+}
+
+.box.breadcrumb-container {
+  border-radius: 0px;
+  background: $grey-dark;
+}
+
+.post-content {
+  max-width: 680px;
+  margin: 0 auto;
+
+  font-size: 1.1em;
+}
