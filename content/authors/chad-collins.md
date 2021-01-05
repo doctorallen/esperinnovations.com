@@ -1,9 +1,11 @@
 ---
-id: chad-collins
-title: 'Chad Collins'
-link: 'github.com/chad-collins'
+id: dave-allen
+title: 'Dave Allen'
+link: 'github.com/doctorallen'
+companyTitle: 'Owner'
+companyName: 'Esper Innovations'
 image: 'uploads/author-images/author-avatar.png'
-email: 'contact@chadcollins.net'
+email: 'dave@esperinnovations.com'
 blurb: 'a little somethin somethin'
 ---
 

@@ -4,17 +4,18 @@
       <div class="container">
         <div class="columns">
           <div class="column is-two-thirds">
-            <ul v-for="post in $page.author.belongsTo.edges" :key="post.node.id">
-              <li>
-                <PostItem :post="post" />
-              </li>
-              <hr />
-            </ul>
+            <div class="cards-grid">
+              <PostItem
+                v-for="post in $page.author.belongsTo.edges"
+                :key="post.node.id"
+                :post="post"
+              />
+            </div>
           </div>
           <div class="column">
             <div class="box">
               <figure class="image is-rounded is-128x128">
-                <img class="is-rounded" :src="`../../${$page.author.image}`" />
+                <img class="is-rounded" :src="`../../../${$page.author.image}`" />
               </figure>
               <div class="content">
                 <h2 class="title is-5">About {{ $page.author.title }}</h2>
@@ -86,5 +87,32 @@ export default {
 .post {
   padding-bottom: 1rem;
   border-bottom: 12px solid $primary;
+}
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+/* Mobile First */
+.grid-item {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+/*Medium Width */
+@media screen and (min-width: 740px) {
+  .grid-item {
+    width: 100%;
+  }
+}
+/*Wide Width */
+@media screen and (min-width: 991px) {
+  .grid-item {
+    width: calc((100% / 2) - 30px);
+  }
 }
 </style>

@@ -53,6 +53,8 @@ collections:
     slug: '{{slug}}'
     fields:
       - { label: 'Name', name: 'title', widget: 'string' }
+      - { label: 'Company Name', name: 'companyName', widget: 'string' }
+      - { label: 'Company Title', name: 'companyTitle', widget: 'string' }
       - { label: 'Email', name: 'email', widget: 'string' }
       - { label: 'Blurb', name: 'blurb', widget: 'string' }
       - { label: 'Link', name: 'link', widget: 'string' }

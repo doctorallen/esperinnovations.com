@@ -1,6 +1,6 @@
 ---
 title: It's All Gibberish!
-author: chad-collins
+author: dave-allen
 tags:
   - Development
   - Design

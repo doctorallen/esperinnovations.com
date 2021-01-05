@@ -1,6 +1,6 @@
 ---
 title: Lorem of the Ipsum
-author: chad-collins
+author: dave-allen
 tags:
   - Development
   - Design

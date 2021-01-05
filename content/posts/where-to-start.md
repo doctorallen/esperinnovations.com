@@ -1,6 +1,6 @@
 ---
 title: Where to Start
-author: chad-collins
+author: dave-allen
 tags:
   - Development
 excerpt: A quick guide on how to begin using this starter.
