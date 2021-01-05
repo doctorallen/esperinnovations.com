@@ -81,19 +81,19 @@ module.exports = {
     ],
     Tag: [
       {
-        path: '/tag/:title',
+        path: '/blog/tags/:title',
         componenent: '~/templates/Tag.vue',
       },
     ],
     Author: [
       {
-        path: '/author/:title',
+        path: '/blog/authors/:title',
         componenent: '~/templates/Author.vue',
       },
     ],
     Series: [
       {
-        path: '/series/:title',
+        path: '/blog/series/:title',
         componenent: '~/templates/Series.vue',
       },
     ],

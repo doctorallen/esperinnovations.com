@@ -19,7 +19,8 @@
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "netlify-cms": "^2.10.55",
     "node-sass": "^4.14.1",
-    "sass-loader": "^9.0.2"
+    "sass-loader": "^9.0.2",
+    "vue-disqus": "^4.0.1"
   },
   "devDependencies": {
     "eslint": "^7.2.0",

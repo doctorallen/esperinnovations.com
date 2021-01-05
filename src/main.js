@@ -6,7 +6,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 // internal icons
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-// import 'prismjs/themes/prism.css';
+import VueDisqus from 'vue-disqus';
 library.add(fas);
 
 export default function (Vue, { router, head, isClient }) {
@@ -17,4 +17,5 @@ export default function (Vue, { router, head, isClient }) {
     defaultIconComponent: 'vue-fontawesome',
     defaultIconPack: 'fas',
   });
+  Vue.use(VueDisqus);
 }

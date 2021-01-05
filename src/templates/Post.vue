@@ -1,22 +1,17 @@
 <template>
   <Layout :pageTitle="$page.post.title">
-      <template slot="heroContent"
-      >
-       <p v-if="$page.post.series" class="subtitle is-6">
-            Part {{$page.post.seriesPart}} of 
-          <g-link :to="$page.post.series.path"
-            >{{ $page.post.series.title }}
-          </g-link>
-        </p>
+    <template slot="heroContent">
+      <p v-if="$page.post.series" class="subtitle is-6">
+        Part {{ $page.post.seriesPart }} of
+        <g-link :to="$page.post.series.path">{{ $page.post.series.title }} </g-link>
+      </p>
     </template>
     <div class="box breadcrumb-container">
       <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
         <ul>
           <li><g-link to="/blog">Blog</g-link></li>
           <li v-if="$page.post.series">
-            <g-link :to="$page.post.series.path">{{
-              $page.post.series.title
-            }}</g-link>
+            <g-link :to="$page.post.series.path">{{ $page.post.series.title }}</g-link>
           </li>
           <li class="is-active">
             <a href="#" aria-current="page">{{ $route.params.title }}</a>
@@ -28,6 +23,9 @@
       <div class="container">
         <div class="content post-content">
           <div v-html="$page.post.content"></div>
+          <div class="disqus-comments">
+            <Disqus shortname="esperinnovations" :identifier="$page.post.title" />
+          </div>
         </div>
       </div>
     </section>
