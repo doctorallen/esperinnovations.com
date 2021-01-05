@@ -292,9 +292,10 @@ main {
 }
 
 .hero {
-  -moz-box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.45);
-  -webkit-box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.45);
-  box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.35);
+  border-bottom: 5px solid $accent-color;
   &.is-medium {
     @include tablet {
       .hero-body {
@@ -312,6 +313,8 @@ main {
   border-radius: 0px;
   //   background: darken($grey-dark, 3);
   background: $accent-color;
+  border-bottom: 5px solid $accent-color;
+  padding: 15px;
 }
 
 .post-content {
@@ -406,7 +409,7 @@ h4 {
 }
 
 .token.punctuation {
-  color: #d8d8d8;
+  color: #da70d6;
 }
 
 .token.namespace {
@@ -414,11 +417,27 @@ h4 {
 }
 
 .token.operator {
+  color: #e2777a;
 }
 
 .token.boolean,
 .token.number {
-  color: #e2777a;
+  background: transparent;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  border-radius: 0;
+  color: inherit;
+  display: inline-block;
+  font-size: 1rem;
+  height: inherit;
+  justify-content: left;
+  line-height: inherit;
+  padding-left: 0;
+  padding-right: 0;
+  white-space: nowrap;
+  color: #448aa9;
 }
 
 .token.string {
