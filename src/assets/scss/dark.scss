@@ -162,6 +162,13 @@ $breadcrumb-item-color: $grey-lighter;
   }
 }
 
+.card.author-card {
+  margin-top: 15px;
+  figure {
+    margin: 0;
+  }
+}
+
 .card {
   //   border: 1px solid $border;
   border-radius: $radius;

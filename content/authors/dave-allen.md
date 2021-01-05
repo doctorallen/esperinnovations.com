@@ -4,9 +4,9 @@ title: 'Dave Allen'
 link: 'github.com/doctorallen'
 companyTitle: 'Owner'
 companyName: 'Esper Innovations'
-image: 'uploads/author-images/author-avatar.png'
+image: 'uploads/author-images/dave-avatar.png'
 email: 'dave@esperinnovations.com'
-blurb: 'a little somethin somethin'
+blurb: 'Dave Allen is a Software Developer Wizard'
 ---
 
 # Bio
