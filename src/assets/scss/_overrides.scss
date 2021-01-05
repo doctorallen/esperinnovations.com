@@ -78,13 +78,13 @@ main {
     }
   }
   &.is-primary {
-    background: #2b3e50;
+    background: $grey-dark;
   }
 }
 
 .box.breadcrumb-container {
   border-radius: 0px;
-  background: $grey-dark;
+  background: darken($grey-dark, 3);
 }
 
 .post-content {

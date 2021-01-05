@@ -104,9 +104,13 @@ module.exports = {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
-      plugins: [
-        // ...global plugins
-      ],
+      plugins: ['@gridsome/remark-prismjs'],
+      autolinkHeadings: {
+        content: {
+          type: 'text',
+          value: '#',
+        },
+      },
     },
   },
 };

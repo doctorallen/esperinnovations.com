@@ -4,16 +4,17 @@ import Buefy from 'buefy';
 import DefaultLayout from '~/layouts/Default.vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 // internal icons
-import { fas } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-  library.add(fas);
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+// import 'prismjs/themes/prism.css';
+library.add(fas);
 
 export default function (Vue, { router, head, isClient }) {
   Vue.component('vue-fontawesome', FontAwesomeIcon);
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout);
   Vue.use(Buefy, {
-    defaultIconComponent: "vue-fontawesome",
+    defaultIconComponent: 'vue-fontawesome',
     defaultIconPack: 'fas',
   });
 }

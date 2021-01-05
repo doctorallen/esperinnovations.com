@@ -20,23 +20,45 @@ viventia, Caenis?
 
 ![](uploads/chad-avatar.png)
 
+```javascript
+import Navbar from '../components/Navbar';
+export default {
+  props: { pageTitle: '', pageSubtitle: '', color: '' },
+  components: { Navbar },
+};
 ```
-if (post_media_pop(1)) {
-    floatingDfsTwain.eTypeDimm(21, keystroke_leaderboard);
-    vistaDeviceRetina.unc_control_paste(terahertzMultithreading,
-            ethics_netbios);
-}
-cpa_unfriend.clean_pcmcia *= 5 + thermistor_ssd(monitorAccess / row,
-        megabitBitmap(stickSpriteCrossplatform, 41, ram_marketing_activex),
-        5);
-if (1) {
-    cycle_install(parity_scroll_runtime);
-} else {
-    wampLanguageComputer(kilobit.simplexDualXhtml(refreshBar), 53 +
-            copyright_upload_powerpoint);
-    clob_enterprise_virus += yobibyte(1);
-    lifoQuad(latency, cybersquatterClobImpact, gis);
-}
+
+```html
+<div class="layout">
+    <Navbar />
+    <section class="hero is-medium is-primary">
+      <div class="hero-body">
+        <transition name="slide-down-fade" appear>
+          <div class="container">
+            <h1 class="title is-1">
+              {{ pageTitle }}
+            </h1>
+            <h2 v-if="pageSubtitle" class="subtitle">
+              {{ pageSubtitle }}
+            </h2>
+            <slot name="heroContent"></slot>
+          </div>
+        </transition>
+      </div>
+    </section>
+    <transition name="slide-fade" appear>
+      <main>
+        <!-- a wrapper for slot is needed -->
+        <slot />
+        <!-- the content -->
+      </main>
+    </transition>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>Copyright &copy; Esper Innovations, 2021.</p>
+      </div>
+    </footer>
+  </div>
 ```
 
 ## Iam comas postquam occupat nitidum mei caperet
