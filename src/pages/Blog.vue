@@ -5,11 +5,7 @@
         <div class="columns">
           <div class="column"></div>
           <div class="column cards-grid is-four-fifths">
-            <article
-              class="card grid-item"
-              v-for="edge in $page.posts.edges"
-              :key="edge.node.id"
-            >
+            <article class="card grid-item" v-for="edge in $page.posts.edges" :key="edge.node.id">
               <div class="card-image">
                 <g-link :to="edge.node.path">
                   <figure class="image is-16by9">
@@ -26,10 +22,7 @@
                   <div class="media-left">
                     <g-link :to="edge.node.author.path">
                       <figure class="image is-48x48">
-                        <img
-                          :src="`../../${edge.node.author.image}`"
-                          alt="Placeholder image"
-                        />
+                        <img :src="`../../${edge.node.author.image}`" alt="Placeholder image" />
                       </figure>
                     </g-link>
                   </div>
@@ -51,13 +44,12 @@
                   {{ edge.node.excerpt }}
                 </div>
 
-                <p v-if="edge.node.series" class="subtitle is-6">
-                  Part {{edge.node.seriesPart}} of
-                  <g-link :to="edge.node.series.path"
-                    >{{ edge.node.series.title }}
-                  </g-link>
+                <p v-if="edge.node.series" class="subtitle series-subtitle is-6">
+                  Part {{ edge.node.seriesPart }} of
+                  <g-link :to="edge.node.series.path">{{ edge.node.series.title }} </g-link>
                 </p>
-
+              </div>
+              <div class="card-footer-tags">
                 <div class="tags">
                   <div class="tag" v-for="tag in edge.node.tags" :key="tag.id">
                     <g-link :to="tag.path">
@@ -66,6 +58,7 @@
                   </div>
                 </div>
               </div>
+              <!-- <div class="card-footer">stuff</div> -->
             </article>
 
             <div class="grid-item"></div>

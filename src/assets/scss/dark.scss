@@ -30,7 +30,7 @@ $background: $grey-dark;
 $body-background-color: $grey-darker;
 $footer-background-color: $background;
 
-$border: $grey;
+$border: rgba($grey, 0.2);
 
 $family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
@@ -40,13 +40,13 @@ $text-light: $grey-light;
 
 $box-background-color: $background;
 
-$card-shadow: none;
-$card-background-color: darken($body-background-color, 2);
+$card-shadow: 0 0 15px darken($grey-dark, 1);
+$card-background-color: darken($grey-dark, 1);
 $card-header-box-shadow: none;
 $card-header-background-color: darken($body-background-color, 3);
 $card-footer-background-color: darken($body-background-color, 3);
 
-$link: $grey-light;
+$link: $grey-lighter;
 $link-hover: $grey-lighter;
 $link-focus: $grey-lighter;
 $link-active: $grey-lighter;
@@ -58,8 +58,8 @@ $button-border-color: $grey;
 $button-hover-border: transparent;
 $button-active-border-color: transparent;
 
-$radius: 0;
-$radius-small: 0;
+$radius: 15px;
+$radius-small: 5px;
 
 $input-hover-color: $link-hover;
 $input-color: $grey-darker;
@@ -107,7 +107,7 @@ $panel-heading-background-color: $grey-dark;
 
 $content-blockquote-border-left: 5px solid $accent-color;
 
-$breadcrumb-item-color: white;
+$breadcrumb-item-color: $grey-lighter;
 
 // Import Bulma and Buefy styles
 @import '~bulma';
@@ -162,13 +162,19 @@ $breadcrumb-item-color: white;
 }
 
 .card {
-  border: 1px solid $border;
+  //   border: 1px solid $border;
   border-radius: $radius;
+  display: flex;
+  flex-direction: column;
 
   .card-image {
     img {
       border-radius: $radius $radius 0 0;
     }
+  }
+
+  .card-content {
+    flex: auto;
   }
 
   .card-header {
@@ -177,9 +183,17 @@ $breadcrumb-item-color: white;
 
   .card-footer,
   .card-footer-item {
-    border-width: 1px;
+    border-width: 0;
     border-color: $border;
   }
+
+  .card-footer-tags {
+    padding: 0 $card-content-padding $card-content-padding $card-content-padding;
+  }
+}
+
+.card .tag {
+  background: $grey-darker;
 }
 
 .modal-card-body {
@@ -322,6 +336,15 @@ main {
   margin: 0 auto;
 
   font-size: 1.1em;
+}
+
+.subtitle,
+.subtitle a {
+  color: $grey-light;
+}
+
+.subtitle.series-subtitle {
+  color: $grey-lighter;
 }
 
 // @import 'overrides';
