@@ -13,7 +13,7 @@
             </div>
           </div>
           <div class="column">
-            <div class="box">
+            <div class="box author-box">
               <figure class="image is-rounded author-image">
                 <img class="is-rounded" :src="`../../../${$page.author.image}`" />
               </figure>
