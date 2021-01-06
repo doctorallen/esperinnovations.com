@@ -1,9 +1,7 @@
 <template>
   <Homepage>
     <div class="section">
-      <div class="container">
-          Homepage
-      </div>
+      <div class="container">Homepage</div>
     </div>
   </Homepage>
 </template>
@@ -20,7 +18,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .card {
   margin-bottom: 1.5rem;
 }

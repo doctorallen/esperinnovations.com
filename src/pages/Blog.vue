@@ -103,7 +103,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .card {
   margin-bottom: 1.5rem;
 }

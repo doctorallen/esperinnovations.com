@@ -93,8 +93,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/overrides.scss';
-
+@import '@/assets/scss/dark.scss';
 .large-data {
   font-size: 4rem;
   text-align: center;

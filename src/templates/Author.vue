@@ -112,8 +112,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/overrides.scss';
-
+@import '@/assets/scss/dark.scss';
 .post {
   padding-bottom: 1rem;
   border-bottom: 12px solid $primary;

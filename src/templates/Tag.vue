@@ -92,7 +92,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/overrides.scss';
+@import '@/assets/scss/dark.scss';
 
 .cards-grid {
   display: flex;
