@@ -79,8 +79,8 @@ $navbar-background-color: $background;
 $navbar-item-color: $text;
 $navbar-item-hover-color: $grey-light;
 $navbar-item-active-color: $primary;
-$navbar-item-hover-background-color: rgba(255, 255, 255, 0.45); //rgba($grey-darker, 0.1);
-$navbar-item-active-background-color: rgba(255, 255, 255, 0.45); //rgba($grey-darker, 0.1);
+$navbar-item-hover-background-color: rgba($accent-color, 0.45); //rgba($grey-darker, 0.1);
+$navbar-item-active-background-color: rgba($accent-color, 0.45); //rgba($grey-darker, 0.1);
 $navbar-dropdown-item-hover-color: $grey-light;
 $navbar-dropdown-item-active-color: $primary;
 $navbar-dropdown-background-color: $background;
@@ -312,7 +312,7 @@ main {
   &.router-link-active,
   &.is-active {
     background-color: transparent;
-    border-bottom: 1px solid $navbar-item-hover-background-color;
+    border-bottom: 2px solid $navbar-item-hover-background-color;
     color: $navbar-item-color;
   }
 }
