@@ -1,11 +1,11 @@
 <template>
-  <Layout :pageTitle="`Posts tagged ${$page.tag.title}`">
+  <Layout :pageTitle="`Posts tagged &quot;${$page.tag.title}&quot;`">
     <template slot="heroContent">
-      <div>
+      <div class="hero-content-stats">
         <p class="heading">Post<span v-if="$page.tag.belongsTo.totalCount > 1">s</span></p>
         <p class="title">{{ $page.tag.belongsTo.totalCount }}</p>
       </div>
-      <div>
+      <div class="hero-content-stats">
         <p class="heading">Last Updated</p>
         <p class="title">{{ $page.tag.belongsTo.edges[0].node.date }}</p>
       </div>
@@ -75,3 +75,34 @@ export default {
   components: { PostItem },
 };
 </script>
+
+<style lang="scss" scoped>
+@import '@/assets/scss/overrides.scss';
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+/* Mobile First */
+.grid-item {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+/*Medium Width */
+@media screen and (min-width: 740px) {
+  .grid-item {
+    width: calc((100% / 2) - 30px);
+  }
+}
+/*Wide Width */
+@media screen and (min-width: 991px) {
+  .grid-item {
+    width: calc((100% / 3) - 30px);
+  }
+}
+</style>

@@ -1,12 +1,12 @@
 <template>
   <Layout :pageTitle="$page.series.title">
-    <template slot="heroContent"
-      ><div class="hero-content-section" v-html="$page.series.content"></div>
-      <div>
+    <template slot="heroContent">
+      <div class="hero-content-section" v-html="$page.series.content"></div>
+      <div class="hero-content-stats">
         <p class="heading">Post<span v-if="$page.series.belongsTo.totalCount > 1">s</span></p>
         <p class="title">{{ $page.series.belongsTo.totalCount }}</p>
       </div>
-      <div>
+      <div class="hero-content-stats">
         <p class="heading">Last Updated</p>
         <p class="title">{{ $page.series.belongsTo.edges[0].node.date }}</p>
       </div>

@@ -37,6 +37,7 @@
                   </g-link>
                 </div>
                 <div class="media-content">
+                  <p class="heading">WRITTEN BY</p>
                   <h2 class="title is-4">
                     <g-link :to="$page.post.author.path">
                       {{ $page.post.author.title }}
