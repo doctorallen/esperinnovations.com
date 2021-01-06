@@ -390,6 +390,14 @@ main {
   margin-top: 1.5rem;
 }
 
+.homepage {
+  background: $grey-dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 // @import 'overrides';
 @import 'animations';
 
