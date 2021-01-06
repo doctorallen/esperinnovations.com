@@ -9,23 +9,12 @@
         <p class="heading">Last Updated</p>
         <p class="title">{{ $page.tag.belongsTo.edges[0].node.date }}</p>
       </div>
-      <!-- <b-icon
-                pack="fas"
-                icon="newspaper"
-                >
-            </b-icon>
-            {{ $page.series.belongsTo.totalCount }}
-            post<span v-if="$page.series.belongsTo.totalCount > 1"
-                      >s</span> -->
     </template>
     <section class="section">
       <div class="container">
-        <ul v-for="post in $page.tag.belongsTo.edges" :key="post.node.id">
-          <li>
-            <PostItem :post="post" />
-          </li>
-          <hr />
-        </ul>
+        <div class="cards-grid">
+          <PostItem v-for="post in $page.tag.belongsTo.edges" :key="post.node.id" :post="post" />
+        </div>
       </div>
     </section>
   </Layout>
@@ -54,6 +43,11 @@ query($id: ID!) {
               seriesPart
               timeToRead
               date(format:"MMMM Do, YYYY")
+
+              tags {
+                  id
+                  path
+              }
               
               author {
                 id

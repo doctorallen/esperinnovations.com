@@ -1,7 +1,7 @@
 ---
 id: dave-allen
 title: 'Dave Allen'
-link: 'github.com/doctorallen'
+github: 'https://github.com/doctorallen'
 companyTitle: 'Owner'
 companyName: 'Esper Innovations'
 image: 'uploads/author-images/dave-avatar.png'

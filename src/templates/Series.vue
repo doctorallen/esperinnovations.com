@@ -54,6 +54,11 @@
               seriesPart
               timeToRead
               date(format:"MMMM Do, YYYY")
+
+              tags {
+                  id
+                  path
+              }
               
               author {
                 id

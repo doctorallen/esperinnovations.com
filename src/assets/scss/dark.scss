@@ -164,8 +164,13 @@ $breadcrumb-item-color: $grey-lighter;
 
 .card.author-card {
   margin-top: 15px;
+  width: 100%;
   figure {
     margin: 0;
+  }
+
+  .social-grid {
+    margin-top: -0.5rem;
   }
 }
 

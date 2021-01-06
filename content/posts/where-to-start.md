@@ -38,9 +38,3 @@ https://gridsome-starter.chadcollins.net
 1. `gridsome create my-blog`https://github.com/chad-collins/gridsome-bulma-netlifycms to install gridsome with this starter
 2. `cd my-blog` to open the folder
 3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-
-   ``
-
-   ``
-
-   ``

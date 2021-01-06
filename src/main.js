@@ -5,9 +5,11 @@ import DefaultLayout from '~/layouts/Default.vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 // internal icons
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import VueDisqus from 'vue-disqus';
 library.add(fas);
+library.add(fab);
 
 export default function (Vue, { router, head, isClient }) {
   Vue.component('vue-fontawesome', FontAwesomeIcon);

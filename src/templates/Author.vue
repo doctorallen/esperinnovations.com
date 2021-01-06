@@ -14,11 +14,32 @@
           </div>
           <div class="column">
             <div class="box">
-              <figure class="image is-rounded is-128x128">
+              <figure class="image is-rounded author-image">
                 <img class="is-rounded" :src="`../../../${$page.author.image}`" />
               </figure>
               <div class="content">
-                <h2 class="title is-5">About {{ $page.author.title }}</h2>
+                <h2 class="title is-3">{{ $page.author.title }}</h2>
+                <p class="subtitle">
+                  {{ $page.author.companyTitle }} at {{ $page.author.companyName }}
+                </p>
+                <div class="social-grid">
+                  <a v-if="$page.author.github" :href="$page.author.github" target="_blank">
+                    <b-icon pack="fab" size="is-large" icon="github"> </b-icon>
+                  </a>
+                  <a
+                    v-if="$page.author.email"
+                    :href="`mailto:${$page.author.email}`"
+                    target="_blank"
+                  >
+                    <b-icon pack="fas" size="is-large" icon="envelope"> </b-icon>
+                  </a>
+                  <a v-if="$page.author.twitter" :href="$page.author.twitter" target="_blank">
+                    <b-icon pack="fab" size="is-large" icon="twitter"> </b-icon>
+                  </a>
+                  <a v-if="$page.author.instagram" :href="$page.author.instagram" target="_blank">
+                    <b-icon pack="fab" size="is-large" icon="instagram"> </b-icon>
+                  </a>
+                </div>
                 <p>{{ $page.author.blurb }}</p>
               </div>
             </div>
@@ -37,6 +58,10 @@
       image
       blurb
       content
+      github
+      email
+      companyName
+      companyTitle
       belongsTo {
         totalCount
         pageInfo {
@@ -54,6 +79,11 @@
               content
               seriesPart
               date(format:"MMMM Do YYYY")
+
+              tags {
+                  id
+                  path
+              }
               
               author {
                 id
@@ -87,6 +117,15 @@ export default {
 .post {
   padding-bottom: 1rem;
   border-bottom: 12px solid $primary;
+}
+
+.author-image {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.social-grid {
+  margin-top: -1rem;
 }
 
 .cards-grid {

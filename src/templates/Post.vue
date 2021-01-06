@@ -28,7 +28,7 @@
               <div class="media">
                 <div class="media-left">
                   <g-link :to="$page.post.author.path">
-                    <figure class="image is-48x48">
+                    <figure class="image is-96x96">
                       <img
                         :src="`../../../../../${$page.post.author.image}`"
                         alt="Placeholder image"
@@ -47,11 +47,40 @@
                       {{ $page.post.author.companyTitle }} at {{ $page.post.author.companyName }}
                     </g-link>
                   </p>
+                  <div class="social-grid">
+                    <a
+                      v-if="$page.post.author.github"
+                      :href="$page.post.author.github"
+                      target="_blank"
+                    >
+                      <b-icon pack="fab" size="is-medium" icon="github"> </b-icon>
+                    </a>
+                    <a
+                      v-if="$page.post.author.email"
+                      :href="`mailto:${$page.post.author.email}`"
+                      target="_blank"
+                    >
+                      <b-icon pack="fas" size="is-medium" icon="envelope"> </b-icon>
+                    </a>
+                    <a
+                      v-if="$page.post.author.twitter"
+                      :href="$page.post.author.twitter"
+                      target="_blank"
+                    >
+                      <b-icon pack="fab" size="is-medium" icon="twitter"> </b-icon>
+                    </a>
+                    <a
+                      v-if="$page.post.author.instagram"
+                      :href="$page.post.author.instagram"
+                      target="_blank"
+                    >
+                      <b-icon pack="fab" size="is-medium" icon="instagram"> </b-icon>
+                    </a>
+                  </div>
+                  <div class="content">
+                    {{ $page.post.author.blurb }}
+                  </div>
                 </div>
-              </div>
-
-              <div class="content">
-                {{ $page.post.author.blurb }}
               </div>
             </div>
           </article>
@@ -85,6 +114,8 @@
        content
        companyName
        companyTitle
+       github
+       email
      }
      series {
        id
