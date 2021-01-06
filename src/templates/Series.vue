@@ -1,23 +1,29 @@
 <template>
   <Layout :pageTitle="$page.series.title">
     <template slot="heroContent">
-      <div class="hero-content-section" v-html="$page.series.content"></div>
-      <div class="hero-content-stats">
+      <div class="columns">
+        <div class="column is-half-desktop is-full-tablet">
+          <div class="hero-content-section" v-html="$page.series.content"></div>
+          <div class="columns">
+            <div class="column is-one-third">
+              <p class="heading">Post<span v-if="$page.series.belongsTo.totalCount > 1">s</span></p>
+              <p class="title">{{ $page.series.belongsTo.totalCount }}</p>
+            </div>
+            <div class="column has-text-right-tablet">
+              <p class="heading">Last Updated</p>
+              <p class="title">{{ $page.series.belongsTo.edges[0].node.date }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="hero-content-stats">
         <p class="heading">Post<span v-if="$page.series.belongsTo.totalCount > 1">s</span></p>
         <p class="title">{{ $page.series.belongsTo.totalCount }}</p>
       </div>
       <div class="hero-content-stats">
         <p class="heading">Last Updated</p>
         <p class="title">{{ $page.series.belongsTo.edges[0].node.date }}</p>
-      </div>
-      <!-- <b-icon
-                pack="fas"
-                icon="newspaper"
-                >
-            </b-icon>
-            {{ $page.series.belongsTo.totalCount }}
-            post<span v-if="$page.series.belongsTo.totalCount > 1"
-                      >s</span> -->
+      </div> -->
     </template>
     <section class="section">
       <div class="container">

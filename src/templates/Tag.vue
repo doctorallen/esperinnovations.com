@@ -1,14 +1,29 @@
 <template>
   <Layout :pageTitle="`Posts tagged &quot;${$page.tag.title}&quot;`">
     <template slot="heroContent">
-      <div class="hero-content-stats">
+      <div class="columns">
+        <div class="column is-half-desktop is-full-tablet">
+          <div class="hero-content-section" v-html="$page.tag.content"></div>
+          <div class="columns">
+            <div class="column is-one-third">
+              <p class="heading">Post<span v-if="$page.tag.belongsTo.totalCount > 1">s</span></p>
+              <p class="title">{{ $page.tag.belongsTo.totalCount }}</p>
+            </div>
+            <div class="column has-text-right-tablet">
+              <p class="heading">Last Updated</p>
+              <p class="title">{{ $page.tag.belongsTo.edges[0].node.date }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="hero-content-stats">
         <p class="heading">Post<span v-if="$page.tag.belongsTo.totalCount > 1">s</span></p>
         <p class="title">{{ $page.tag.belongsTo.totalCount }}</p>
       </div>
       <div class="hero-content-stats">
         <p class="heading">Last Updated</p>
         <p class="title">{{ $page.tag.belongsTo.edges[0].node.date }}</p>
-      </div>
+      </div> -->
     </template>
     <section class="section">
       <div class="container">
