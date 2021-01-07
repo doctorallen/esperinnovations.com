@@ -7,7 +7,7 @@ tags:
   - UX
 excerpt: The most loremy of ipsums
 date: 2020-07-30T22:01:10.795Z
-featuredImage: uploads/kiss-the-chef.png
+featuredImage: uploads/placeholder2.jpg
 ---
 # Quam et opem et vastarumque recessu laudatissima
 

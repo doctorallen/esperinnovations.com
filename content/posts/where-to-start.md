@@ -5,7 +5,7 @@ tags:
   - Development
 excerpt: A quick guide on how to begin using this starter.
 date: 2020-07-30T19:22:21.943Z
-featuredImage: uploads/class-with-chad.png
+featuredImage: uploads/placeholder3.jpg
 ---
 
 # Gridsome Starter with Netlify CMS & Buefy

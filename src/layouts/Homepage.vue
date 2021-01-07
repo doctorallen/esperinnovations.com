@@ -5,7 +5,7 @@
       <main class="homepage">
         <div class="centered-title">
           <h1 class="title">Esper Innovations</h1>
-          <h2 class="subtitle">Better software, better business, naturally.</h2>
+          <!-- <h2 class="subtitle">Better software, better business, naturally.</h2>
           <h2 class="subtitle">Innovative software, better business, naturally.</h2>
           <h2 class="subtitle">No-bullshit software that enables your business to work smarter.</h2>
           <h2 class="subtitle">
@@ -33,7 +33,7 @@
             that.
           </h2>
           <h2 class="subtitle">Lead your business to a better a more promising tomorrow.</h2>
-          <h2 class="subtitle">Exceptional Software, Progressive Experiences, Really.</h2>
+          <h2 class="subtitle">Exceptional Software, Progressive Experiences, Really.</h2> -->
         </div>
       </main>
     </transition>
