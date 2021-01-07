@@ -6,20 +6,22 @@
         <g-link :to="$page.post.series.path">{{ $page.post.series.title }} </g-link>
       </p>
     </template>
-    <div class="box breadcrumb-container">
-      <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
-        <ul>
-          <li><g-link to="/blog">Blog</g-link></li>
-          <li v-if="$page.post.series">
-            <g-link :to="$page.post.series.path">{{ $page.post.series.title }}</g-link>
-          </li>
-          <li class="is-active">
-            <a href="#" aria-current="page">{{ $route.params.title }}</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <section class="section">
+    <template slot="accentBar">
+      <div class="box breadcrumb-container">
+        <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+          <ul>
+            <li><g-link to="/blog">Blog</g-link></li>
+            <li v-if="$page.post.series">
+              <g-link :to="$page.post.series.path">{{ $page.post.series.title }}</g-link>
+            </li>
+            <li class="is-active">
+              <a href="#" aria-current="page">{{ $route.params.title }}</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </template>
+    <section class="section main-section">
       <div class="container">
         <div class="content post-content">
           <div v-html="$page.post.content"></div>

@@ -25,7 +25,7 @@
         <p class="title">{{ $page.series.belongsTo.edges[0].node.date }}</p>
       </div> -->
     </template>
-    <section class="section">
+    <section class="section main-section">
       <div class="container">
         <div class="cards-grid">
           <PostItem v-for="post in $page.series.belongsTo.edges" :key="post.node.id" :post="post" />

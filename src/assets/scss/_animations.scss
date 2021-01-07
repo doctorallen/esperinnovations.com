@@ -25,3 +25,16 @@
   transform: translateY(-80px);
   opacity: 0;
 }
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.expand-fade-enter-active {
+  transition: all 0.5s ease;
+}
+.expand-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.expand-fade-enter,
+.expand-fade-leave-to {
+  opacity: 0;
+}

@@ -1,6 +1,6 @@
 <template>
   <Layout pageTitle="About">
-    <section class="section">
+    <section class="section main-section">
       <div class="container">
         <div class="content">
           <h2>About us</h2>

@@ -1,6 +1,6 @@
 <template>
   <Layout pageTitle="Blog">
-    <div class="section">
+    <div class="section main-section">
       <div class="container">
         <div class="cards-grid">
           <article class="card grid-item" v-for="edge in $page.posts.edges" :key="edge.node.id">

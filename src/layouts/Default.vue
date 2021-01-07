@@ -11,10 +11,15 @@
             <h2 v-if="pageSubtitle" class="subtitle">
               {{ pageSubtitle }}
             </h2>
-            <slot name="heroContent"></slot>
+            <slot name="heroContent" />
           </div>
         </transition>
       </div>
+    </section>
+    <section class="accent-bar">
+      <transition name="expand-fade" appear>
+        <slot name="accentBar" />
+      </transition>
     </section>
     <transition name="slide-fade" appear>
       <main>

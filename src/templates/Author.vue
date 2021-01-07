@@ -1,6 +1,6 @@
 <template>
   <Layout :pageTitle="`Posts by ${$page.author.title}`">
-    <section class="section">
+    <section class="section main-section">
       <div class="container">
         <div class="columns">
           <div class="column is-two-thirds">
