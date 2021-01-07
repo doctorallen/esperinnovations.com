@@ -18,8 +18,6 @@ Lorem markdownum Ampyciden australem dextra in omnibus aggere matris oraque,
 primo **notavit** cornibus Polydore primus hic haut fulminis. Lecto praetereo
 viventia, Caenis?
 
-![](uploads/chad-avatar.png)
-
 ```java
 if (post_media_pop(1)) {
     floatingDfsTwain.eTypeDimm(21, keystroke_leaderboard);

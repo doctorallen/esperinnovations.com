@@ -1,14 +1,14 @@
 ---
-title: Part 2 test
+title: Part 3 test
 author: dave-allen
 tags:
   - Development
   - Design
 series: test-series
-seriesPart: 2
+seriesPart: 3
 excerpt: Lorem ipsum has a deeper meaning.
-date: 2020-08-30T21:58:14.606Z
-featuredImage: uploads/placeholder1.jpg
+date: 2020-09-30T21:58:14.606Z
+featuredImage: uploads/placeholder3.jpg
 ---
 # Viro mihi egit colantur devorat aethera
 
