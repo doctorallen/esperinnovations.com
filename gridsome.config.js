@@ -4,7 +4,7 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Esper Innovations',
   plugins: [
     // Load all Blog Posts from file system
     {

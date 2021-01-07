@@ -12,9 +12,7 @@ export default {
   components: {
     Homepage,
   },
-  metaInfo: {
-    title: 'Hello, world!',
-  },
+  metaInfo: {},
 };
 </script>
 
