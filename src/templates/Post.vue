@@ -87,6 +87,16 @@
               </div>
             </div>
           </article>
+          <div class="article-tags">
+            <p class="heading">TAGGED AS</p>
+            <div class="tags">
+              <div class="tag" v-for="tag in $page.post.tags" :key="tag.id">
+                <g-link :to="tag.path">
+                  {{ tag.id }}
+                </g-link>
+              </div>
+            </div>
+          </div>
           <div class="disqus-comments">
             <Disqus shortname="esperinnovations" :identifier="$page.post.title" />
           </div>
@@ -157,6 +167,7 @@ export default {
      tags {
        id
        title
+       path
      }
      author {
        id
