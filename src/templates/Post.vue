@@ -88,7 +88,7 @@
             </div>
           </article>
           <div class="article-tags">
-            <p class="heading">TAGGED AS</p>
+            <p class="heading has-text-weight-bold">TAGGED AS</p>
             <div class="tags">
               <div class="tag" v-for="tag in $page.post.tags" :key="tag.id">
                 <g-link :to="tag.path">
