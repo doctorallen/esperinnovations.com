@@ -78,7 +78,7 @@
               path
               content
               seriesPart
-              date(format:"MMMM Do YYYY")
+              date
 
               tags {
                   id
@@ -106,8 +106,42 @@
 </page-query>
 <script>
 import PostItem from '../components/PostItem';
+import moment from 'moment';
 export default {
   components: { PostItem },
+  metaInfo() {
+    return {
+      title: this.$page.author.title,
+      meta: [
+        { name: 'description', content: this.$page.author.blurb },
+        { name: 'twitter:card', content: 'summary' },
+        { name: 'twitter:description', content: this.$page.author.blurb },
+        { name: 'twitter:title', content: this.$page.author.title },
+        //     { name: "twitter:site", content: "@therealdanvega" },
+        // { name: 'twitter:image', content: this.getAuthorImage },
+        //     { name: "twitter:creator", content: "@therealdanvega" },
+        { property: 'og:type', content: 'article' },
+        { property: 'og:title', content: this.$page.author.title },
+        { property: 'og:description', content: this.$page.author.blurb },
+        {
+          property: 'og:url',
+          content: `${process.env.GRIDSOME_BASE_URL}${this.$page.author.path}`,
+        },
+        {
+          property: 'article:published_time',
+          content: moment(this.$page.author.belongsTo.edges[0].node.date).format('MM-DD-YYYY'),
+        },
+        { property: 'og:updated_time', content: this.$page.author.belongsTo.edges[0].node.date },
+        // { property: 'og:image', content: this.getAuthorImage },
+        // { property: 'og:image:secure_url', content: this.getAuthorImage },
+      ],
+    };
+  },
+  computed: {
+    getAuthorImage() {
+      return `${process.env.GRIDSOME_BASE_URL}/${this.$page.author.image}`;
+    },
+  },
 };
 </script>
 
