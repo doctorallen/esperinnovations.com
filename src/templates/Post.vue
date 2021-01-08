@@ -97,34 +97,40 @@
 </template>
 
 <script>
+import moment from 'moment';
 export default {
   metaInfo() {
     return {
       title: this.$page.post.title,
-      //   meta: [
-      //     { name: "description", content: this.$page.post.excerpt },
-      //     { name: "twitter:card", content: "summary_large_image" },
-      //     { name: "twitter:description", content: this.$page.post.excerpt },
-      //     { name: "twitter:title", content: this.$page.post.title },
-      //     { name: "twitter:site", content: "@therealdanvega" },
-      //     { name: "twitter:image", content: this.getCoverImage },
-      //     { name: "twitter:creator", content: "@therealdanvega" },
-      //     { property: "og:type", content: "article" },
-      //     { property: "og:title", content: this.$page.post.title },
-      //     { property: "og:description", content: this.$page.post.excerpt },
-      //     {
-      //       property: "og:url",
-      //       content: `${this.getBaseUrl}${this.$page.post.path}`
-      //     },
-      //     {
-      //       property: "article:published_time",
-      //       content: moment(this.$page.post.date).format("MM-DD-YYYY")
-      //     },
-      //     { property: "og:updated_time", content: this.$page.post.date },
-      //     { property: "og:image", content: this.getCoverImage },
-      //     { property: "og:image:secure_url", content: this.getCoverImage }
-      //   ],
+      meta: [
+        { name: 'description', content: this.$page.post.excerpt },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:description', content: this.$page.post.excerpt },
+        { name: 'twitter:title', content: this.$page.post.title },
+        //     { name: "twitter:site", content: "@therealdanvega" },
+        { name: 'twitter:image', content: this.getFeaturedImage },
+        //     { name: "twitter:creator", content: "@therealdanvega" },
+        { property: 'og:type', content: 'article' },
+        { property: 'og:title', content: this.$page.post.title },
+        { property: 'og:description', content: this.$page.post.excerpt },
+        {
+          property: 'og:url',
+          content: `${process.env.GRIDSOME_BASE_URL}${this.$page.post.path}`,
+        },
+        {
+          property: 'article:published_time',
+          content: moment(this.$page.post.date).format('MM-DD-YYYY'),
+        },
+        { property: 'og:updated_time', content: this.$page.post.date },
+        { property: 'og:image', content: this.getFeaturedImage },
+        { property: 'og:image:secure_url', content: this.getFeaturedImage },
+      ],
     };
+  },
+  computed: {
+    getFeaturedImage() {
+      return `${process.env.GRIDSOME_BASE_URL}/${this.$page.post.featuredImage}`;
+    },
   },
 };
 </script>
@@ -138,6 +144,8 @@ export default {
      featuredImage
      content
      seriesPart
+     date
+     path
      tags {
        id
      }
