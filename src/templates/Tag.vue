@@ -1,5 +1,5 @@
 <template>
-  <Layout :pageTitle="`Posts tagged &quot;${$page.tag.title}&quot;`">
+  <Layout :pageTitle="pageTitle">
     <template slot="heroContent">
       <div class="columns">
         <div class="column is-half-desktop is-full-tablet">
@@ -11,7 +11,7 @@
             </div>
             <div class="column has-text-right-tablet">
               <p class="heading">Last Updated</p>
-              <p class="title">{{ $page.tag.belongsTo.edges[0].node.date }}</p>
+              <p class="title">{{ $page.tag.belongsTo.edges[0].node.date | moment }}</p>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ query($id: ID!) {
               content
               seriesPart
               timeToRead
-              date(format:"MMMM Do, YYYY")
+              date
 
               tags {
                   id
@@ -86,8 +86,47 @@ query($id: ID!) {
 
 <script>
 import PostItem from '../components/PostItem';
+import moment from 'moment';
 export default {
   components: { PostItem },
+  metaInfo() {
+    return {
+      title: this.$page.tag.title,
+      meta: [
+        { name: 'description', content: this.pageTitle },
+        { name: 'twitter:card', content: 'summary' },
+        { name: 'twitter:description', content: this.pageTitle },
+        { name: 'twitter:title', content: this.pageTitle },
+        //     { name: "twitter:site", content: "@therealdanvega" },
+        // { name: 'twitter:image', content: this.getFeaturedImage },
+        //     { name: "twitter:creator", content: "@therealdanvega" },
+        { property: 'og:type', content: 'article' },
+        { property: 'og:title', content: this.pageTitle },
+        { property: 'og:description', content: this.pageTitle },
+        {
+          property: 'og:url',
+          content: `${process.env.GRIDSOME_BASE_URL}${this.$page.tag.path}`,
+        },
+        {
+          property: 'article:published_time',
+          content: moment(this.$page.tag.belongsTo.edges[0].node.date).format('MM-DD-YYYY'),
+        },
+        { property: 'og:updated_time', content: this.$page.tag.belongsTo.edges[0].node.date },
+        // { property: 'og:image', content: this.getFeaturedImage },
+        // { property: 'og:image:secure_url', content: this.getFeaturedImage },
+      ],
+    };
+  },
+  filters: {
+    moment: function (date) {
+      return moment(date).format('MMMM Do, YYYY');
+    },
+  },
+  computed: {
+    pageTitle: function () {
+      return `Posts tagged "${this.$page.tag.title}"`;
+    },
+  },
 };
 </script>
 

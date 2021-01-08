@@ -113,6 +113,9 @@ export default {
         { property: 'og:type', content: 'article' },
         { property: 'og:title', content: this.$page.post.title },
         { property: 'og:description', content: this.$page.post.excerpt },
+        { property: 'og:article:author', content: this.$page.post.author.title },
+        { property: 'og:article:section', content: 'Technology' },
+        ...this.tagMeta,
         {
           property: 'og:url',
           content: `${process.env.GRIDSOME_BASE_URL}${this.$page.post.path}`,
@@ -131,6 +134,11 @@ export default {
     getFeaturedImage() {
       return `${process.env.GRIDSOME_BASE_URL}/${this.$page.post.featuredImage}`;
     },
+    tagMeta() {
+      return this.$page.post.tags.map((t) => {
+        return { property: 'og:article:tag', content: t.title };
+      });
+    },
   },
 };
 </script>
@@ -148,6 +156,7 @@ export default {
      path
      tags {
        id
+       title
      }
      author {
        id
