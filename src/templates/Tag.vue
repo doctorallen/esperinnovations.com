@@ -1,5 +1,5 @@
 <template>
-  <Layout :pageTitle="pageTitle">
+  <Layout :pageTitle="pageTitle" :key="$route.fullPath">
     <template slot="heroContent">
       <div class="columns">
         <div class="column is-half-desktop is-full-tablet">

@@ -1,5 +1,5 @@
 <template>
-  <Layout :pageTitle="$page.post.title">
+  <Layout :pageTitle="$page.post.title" :key="$route.fullPath">
     <template slot="heroContent">
       <p v-if="$page.post.series" class="subtitle is-6">
         Part {{ $page.post.seriesPart }} of

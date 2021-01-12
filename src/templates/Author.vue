@@ -1,5 +1,5 @@
 <template>
-  <Layout :pageTitle="`Posts by ${$page.author.title}`">
+  <Layout :pageTitle="`Posts by ${$page.author.title}`" :key="$route.fullPath">
     <section class="section main-section">
       <div class="container">
         <div class="columns">
