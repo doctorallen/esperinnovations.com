@@ -30,10 +30,10 @@
               <div class="media">
                 <div class="media-left">
                   <g-link :to="$page.post.author.path">
-                    <figure class="image is-96x96">
+                    <figure class="image is-128x128 author-image">
                       <img
                         :src="`../../../../../${$page.post.author.image}`"
-                        alt="Placeholder image"
+                        :alt="`Avatar of ${$page.post.author.title}`"
                       />
                     </figure>
                   </g-link>
