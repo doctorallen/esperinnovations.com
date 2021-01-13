@@ -22,7 +22,7 @@
       </div>
       <div class="hero-content-stats">
         <p class="heading">Last Updated</p>
-        <p class="title">{{ $page.tag.belongsTo.edges[0].node.date }}</p>
+        <p class="title">{{ $page.tag.belongsTo.edges[0].node.date | moment }}</p>
       </div> -->
     </template>
     <section class="section main-section">
