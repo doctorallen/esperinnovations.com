@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Esper Innovations</title>
   <meta name="description"
-    content="Esper Innovations: software development consulting, and Deckard, a local-first second brain for Markdown notes in VS Code.">
+    content="Esper Innovations: software development consulting, Deckard, a local-first second brain for Markdown notes in VS Code, and Esper Themes, high-contrast film-inspired VS Code themes.">
   <meta name="theme-color" content="#16151C">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,11 +59,18 @@
       display: block
     }
 
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: min(100%, 520px)
+    }
+
     .card {
       display: flex;
       align-items: center;
       gap: 24px;
-      width: min(100%, 520px);
+      width: 100%;
       padding: 22px 26px;
       border: 1px solid var(--line);
       background: var(--surface);
@@ -141,16 +148,29 @@
     <img src="images/esper-lockup.svg" alt="esper innovations" width="1000" height="378">
   </a>
 
-  <a class="card" href="https://marketplace.visualstudio.com/items?itemName=esperinnovations.deckard-notes">
-    <img src="images/deckard-lockup.svg" alt="" width="112" height="112">
-    <div class="text">
-      <span class="eyebrow">VS Code extension</span>
-      <h2>Deckard</h2>
-      <p>Your notes, tasks, and people, connected and kept local. Find what you wrote, chase down loose ends, and retire
-        what's done.</p>
-      <span class="go">deckard.esperinnovations.com &rarr;</span>
-    </div>
-  </a>
+  <div class="cards">
+    <a class="card" href="https://marketplace.visualstudio.com/items?itemName=esperinnovations.deckard-notes">
+      <img src="images/deckard-lockup.svg" alt="" width="112" height="112">
+      <div class="text">
+        <span class="eyebrow">VS Code extension</span>
+        <h2>Deckard</h2>
+        <p>Your notes, tasks, and people, connected and kept local. Find what you wrote, chase down loose ends, and retire
+          what's done.</p>
+        <span class="go">deckard.esperinnovations.com &rarr;</span>
+      </div>
+    </a>
+
+    <a class="card" href="https://marketplace.visualstudio.com/items?itemName=esperinnovations.esper-themes">
+      <img src="images/esper-themes.svg" alt="" width="112" height="112">
+      <div class="text">
+        <span class="eyebrow">VS Code themes</span>
+        <h2>Esper Themes</h2>
+        <p>High-contrast, film-inspired color themes: Replicant, LCARS, Oblivion, Synthwave, Tomcat, Fellowship, Cooper,
+          Helix, Bluey, and a generated Q theme that always meets WCAG AA.</p>
+        <span class="go">VS Code Marketplace &rarr;</span>
+      </div>
+    </a>
+  </div>
 
   <footer>&copy; 2026 Esper Innovations</footer>
 </body>
